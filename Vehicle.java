@@ -4,4 +4,8 @@ public class Vehicle {
   public String mModel;
   public int mMiles;
   public int mPrice;
+
+  public boolean worthbuying(int maxPrice) {
+    return(mPrice < maxPrice);
+  }
 }

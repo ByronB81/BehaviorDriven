@@ -1,18 +1,22 @@
+import java.io.Console;
+
 public class App {
   public static void main(String[] args) {
+    Console console = System.console();
+
     Vehicle hatchback = new Vehicle();
       hatchback.mYear = 1994;
       hatchback.mBrand = "Subaru";
       hatchback.mModel = "Legacy";
       hatchback.mMiles = 170000;
-      hatchback.mPrice = 4000;
+      hatchback.mPrice = 3000;
 
     Vehicle suv = new Vehicle();
       suv.mYear = 2002;
       suv.mBrand = "Ford";
       suv.mModel = "Explorer";
       suv.mMiles = 100000;
-      suv.mPrice = 4000;
+      suv.mPrice = 4200;
 
     Vehicle sedan = new Vehicle();
       sedan.mYear = 2015;
@@ -37,15 +41,21 @@ public class App {
 
     Vehicle[] allVehicles = {hatchback, suv, sedan, truck, crossover};
 
+    System.out.println("What is your maximum budget for a vehicle?");
+    String userStrNum = console.readLine();
+    int userMaxBudget = Integer.parseInt(userStrNum);
+
     System.out.println("All Vehicles:");
 
     for (Vehicle car : allVehicles) {
+      if (car.worthbuying(userMaxBudget)){
       System.out.println("-------------------");
       System.out.println(car.mYear);
       System.out.println(car.mBrand);
       System.out.println(car.mModel);
       System.out.println(car.mMiles);
       System.out.println(car.mPrice);
+      }
     }
   }
 }
