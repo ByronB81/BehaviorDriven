@@ -28,7 +28,14 @@ public class App {
       truck.mMiles = 100000;
       truck.mPrice = 4000;
 
-    Vehicle[] allVehicles = {hatchback, suv, sedan, truck};
+    Vehicle crossover = new Vehicle();
+      crossover.mYear = 1998;
+      crossover.mBrand = "Toyota";
+      crossover.mModel = "Rav-4";
+      crossover.mMiles = 200000;
+      crossover.mPrice = 3500;
+
+    Vehicle[] allVehicles = {hatchback, suv, sedan, truck, crossover};
 
     System.out.println("All Vehicles:");
 

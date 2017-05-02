@@ -3,4 +3,5 @@ public class Animals {
   public String ownerName;
   public int age;
   public String breed;
+  public String sex;
 }
