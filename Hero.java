@@ -1,19 +1,19 @@
 class Hero {
-  public String name;
-  public int age;
-  public boolean good;
-  public String home;
-  public int price;
+  public String hName;
+  public int hAge;
+  public boolean hGood;
+  public String hHome;
+  public int hPrice;
 
-  // public Hero(String name, int age, boolean good, String home, int price){
-  //   name = name;
-  //   age = age;
-  //   good = good;
-  //   home = home;
-  //   price = price;
-  // }
+  public Hero(String name, int age, boolean good, String home, int price){
+    hName = name;
+    hAge = age;
+    hGood = good;
+    hHome = home;
+    hPrice = price;
+  }
 
   public boolean afford(int max) {
-    return (price <= max);
+    return (hPrice <= max);
   }
 }
