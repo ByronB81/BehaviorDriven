@@ -1,34 +1,12 @@
 public class AniApp {
   public static void main(String[] args) {
-    Animals dog = new Animals();
-      dog.animalName = "Toby";
-      dog.ownerName = "Jane";
-      dog.age = 5;
-      dog.breed = "Collie";
-      dog.sex = "M";
 
-    Animals cat = new Animals();
-      cat.animalName = "Patches";
-      cat.ownerName = "Bess";
-      cat.age = 9;
-      cat.breed = "Calico";
-      cat.sex = "F";
+    Animals dog = new Animals("Toby","Jane", 5, "Collie", "M");
+    Animals cat = new Animals("Patches", "Bess", 9, "Calico", "F");
+    Animals lizard = new Animals("Izzy", "Bucky", 3, "Iguana", "F");
+    Animals hamster = new Animals("Fred", "Sarah", 1, "Hamster", "M");
 
-    Animals lizard = new Animals();
-      lizard.animalName = "Izzy";
-      lizard.ownerName = "Bucky";
-      lizard. age = 3;
-      lizard.breed = "Iguana";
-      lizard.sex = "F";
-
-    Animals hamster = new Animals();
-      hamster.animalName = "Fred";
-      hamster.ownerName = "Sarah";
-      hamster.age = 1;
-      hamster.breed = "Brown";
-      hamster.sex = "M";
-
-    Animals[] allAnimals = {dog, cat, lizard, hamster};
+  Animals[] allAnimals = {dog, cat, lizard, hamster};
 
     System.out.println();
     System.out.println("These are all of my friends pets:");
@@ -37,14 +15,14 @@ public class AniApp {
         System.out.print(animal.ownerName + "'s pet ");
         System.out.println(animal.animalName);
         if (animal.sex == "F") {
-          System.out.print("She's " + animal.age);
+          System.out.print("She's a " + animal.age);
         } else if (animal.sex == "M") {
-          System.out.print("He's " + animal.age);
+          System.out.print("He's a " + animal.age);
         }
         if (animal.age > 1) {
-          System.out.println(" years old!");
+          System.out.println(" year old " + animal.breed + "!");
         } else {
-          System.out.println(" year old!");
+          System.out.println(" year old " + animal.breed + "!");
         }
     }
     System.out.println();
