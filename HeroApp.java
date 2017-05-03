@@ -33,11 +33,11 @@ public class HeroApp{
         if (oneHero.hGood == true) {
           System.out.println("and I'm pretty sure he's a good guy!");
           System.out.println();
-          System.out.println("________________________");
+          System.out.println("_________________________");
         } else {
           System.out.println("but he doesn't sound like a very nice dude...");
           System.out.println();
-          System.out.println("________________________");
+          System.out.println("_________________________");
         }
       }
     }
